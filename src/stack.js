@@ -13,9 +13,13 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 class Stack {
-  push(/* element */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  push(element) {
+    const argLength = arguments.length;
+    const arrLength = this.length;
+    for (let i = 0; i < argLength; i++) {
+      this[arrLength + i] = arguments[i];
+    }
+    return this.length;
   }
 
   pop() {
